@@ -1,26 +1,19 @@
-// Import
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Create
-const App = () => {
-	const btnTxt = ['Hi', ' there'];
-	const btnTxt1 = {text: 'Hi there'};
-	const labelTxt = 'Enter name';
-	const style = {backgroundColor: 'blue', color: 'white'};
+function getTime() {
+	return (new Date()).toLocaleTimeString()
+}
 
+const App = () => {
 	return (
 		<div>
-			<label className="label" htmlFor="name">{labelTxt}</label>
-			<input id="name" type="text"/>
-			<button style={{backgroundColor: 'blue', color: 'white'}}>{btnTxt}</button>
-			<button style={style}>{btnTxt1.text}</button>
+			<div>Current Time:</div>
+			<h3>{getTime()}</h3>
 		</div>
 	);
 };
 
-
-// Take the component and show
 ReactDOM.render(
 	<App/>,
 	document.querySelector('#root')
