@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay'
+import Spinner from './Spinner'
 
 class App extends React.Component {
 
@@ -20,7 +21,7 @@ class App extends React.Component {
 				<SeasonDisplay pos={this.state.pos} mes={this.state.type} />
 			);
 		} else {
-			return <div>Loading!</div>
+			return <Spinner message="Please accept location request" />;
 		}
 	}
 }
