@@ -1,6 +1,7 @@
 import React from 'react';
-import unpslash from '../unpslash';
+import unpslash from '../api/unpslash';
 import SearchBar from './SearchBar';
+import ImageList from './ImageList';
 
 class App extends React.Component {
 
@@ -19,7 +20,7 @@ class App extends React.Component {
 		return (
 			<div className="ui container">
 				<SearchBar onSubmit={this.onSearchSubmit} />
-				Found {this.state.images.length} images
+				<ImageList images={this.state.images} />
 			</div>
 		);
 	}
